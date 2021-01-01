@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const FILEPATH = __dirname;
+const FILEPATH = path.join(__dirname, '/Data');
 const timeStamp = Math.round(+new Date() / 1000);
 
 class DataStore {
@@ -10,12 +10,12 @@ class DataStore {
 
   saveData(data) {
     const dataJSON = JSON.stringify(data);
-    fs.writeFileSync(path.join(this.filePath, "data.json"), dataJSON);
+    fs.writeFileSync(path.join(this.filePath, "/data.json"), dataJSON);
   }
 
   loadData() {
     try {
-      const dataBuffer = fs.readFileSync(path.join(this.filePath, "data.json"));
+      const dataBuffer = fs.readFileSync(path.join(this.filePath, "/data.json"));
       const dataJSON = dataBuffer.toString();
       return JSON.parse(dataJSON);
     } catch (e) {

@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const ds = require('data-store');
 
-const filepath = path.join(__dirname, '../data.json')
+const filepath = path.join(__dirname, '../Data/data.json')
 
 // Deleting the data.json before running testcases.
 fs.unlink(filepath, (err) => {
@@ -59,7 +59,7 @@ setTimeout(() => {
     // In time deletion
     expect(d.deleteData('2')).toBe('Removed key was : ' + '2');
 
-    
+
   });
   
 }, 60000)
