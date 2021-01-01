@@ -27,6 +27,9 @@ class DataStore {
 
     if(key.length > 32)
         return "Key length is too long."
+    
+    if(typeof key !== 'string')
+        return "key is not a string"
 
     const data = this.loadData();
     const duplicateData = data.find((datum) => datum.key === key);
