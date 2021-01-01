@@ -1,0 +1,14 @@
+{
+  "name": "data-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "data-store.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^26.6.3"
+  }
+}
